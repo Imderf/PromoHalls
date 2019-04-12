@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Site</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link href="css/hover.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- CSS -->
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- FONTS -->
+    <!-- JS -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/npm.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+    <script type="text/javascript">
+        var wow = new WOW({
+            boxClass: 'wow', // animated element css class (default is wow)
+            animateClass: 'animated', // animation css class (default is animated)
+            offset: 0, // distance to the element when triggering the animation (default is 0)
+            mobile: true, // trigger animations on mobile devices (default is true)
+            live: true, // act on asynchronously loaded content (default is true)
+            callback: function(box) {
+                // the callback is fired every time an animation is started
+                // the argument that is passed in is the DOM node being animated
+            },
+            scrollContainer: null // optional scroll container selector, otherwise use window
+        });
+        wow.init();
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            //nos desplazamos entre todos los divs
+            $('a.ancla').click(function(e){
+            e.preventDefault();
+            enlace  = $(this).attr('href');
+            $('html, body').animate({
+                scrollTop: $(enlace).offset().top
+            }, 1000);
+            });
+            //vamos al principio o al final de la página
+            $('a.arriba').click(function(e){
+            e.preventDefault();
+            volver  = $(this).attr('href');
+            $('html, body').animate({
+                scrollTop: $(volver).offset().top
+            }, 800);
+            });
+            //pasando la cantidad de pixeles que queremos a scrollTop
+            $('.prueba').click(function(){
+                $('html, body').animate({scrollTop:100}, 2000); return false;
+            });
+        });
+
+
+        </script>
+        <script type="text/javascript">
+    $(document).ready(function(){
+        $("#myModal2").modal('show');
+    });
+</script>
+    <!-- JS -->
+</head>
+
+<body>
+    <div class="cuerpo">
+        <!-- HEADER -->
+        <div class="header hidden-xs">
+            <div class="container">
+                <div class="col-md-3 nopadding">
+                    <div class="logo">
+                        <img src="images/1/uso_1_03.png">
+                    </div>
+                </div>
+                <div class="col-md-6 nopadding">
+                    <ul class="ul menu">
+                        <li><a href="#cuerpo1" class="arriba">INICIO</a></li>
+                        <li><a href="#cuerpo2" class="arriba">MECÁNICA</a></li>
+                        <li><a href="#cuerpo3" class="arriba">PRODUCTOS <BR> PARTICIPANTES</BR></li>
+                        <li><a href="#cuerpo4" class="arriba">PREMIOS</a></li>
+                        <li><a href="#cuerpo5" class="arriba">GANADORES</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="ul logos">
+                        <li>
+                            <a href=""><img src="images/1/uso_1_06.png"></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="images/1/uso_1_08.png" style="display: none;"></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="images/1/uso_1_10.png" style="display: none;"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- HEADER -->
+
+        <!-- HEADER MOBILE -->
+        <div class="header-mobile visible-xs">
+            <div class="col-xs-3">
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="menu-mobileclik">&#9776;</span>
+            </div>
+            <div class="col-xs-9 logo-mobile">
+                <img src="images/1/uso_1_03.png">
+            </div>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#cuerpo1" class="arriba" onclick="closeNav()">INICIO</a>
+                <a href="#cuerpo2" class="arriba" onclick="closeNav()">MECÁNICA</a>
+                <a href="#cuerpo3" class="arriba" onclick="closeNav()">PRODUCTOS <BR> PARTICIPANTES</BR></a>
+                <a href="#cuerpo4" class="arriba" onclick="closeNav()">PREMIOS</a>
+                <a href="#cuerpo5" class="arriba" onclick="closeNav()">GANADORES</a>
+                <ul class="ul logos-mobile">
+                    <li>
+                        <a href=""><img src="images/1/uso_1_06.png"></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/1/uso_1_08.png"></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/1/uso_1_10.png"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- HEADER MOBILE -->
+
+        <!-- CUERPO 1 -->
+        <div class="cuerpo-1" id="cuerpo1">
+            <div class="container" id="scene">
+                <div class="uno hidden-xs" data-depth="0.2"><img src="images/1/scene_03.png"></div>
+                <div class="dos hidden-xs" data-depth="0.6"><img src="images/1/scene_06.png"></div>
+                <div class="dos visible-xs" data-depth="2"><img src="images/1/scene_06.png"></div>
+                <div class="tres hidden-xs" data-depth="0.2"><img src="images/1/scene_10.png"></div>
+                <div class="cuatro hidden-xs hidden-sm" data-depth="0.2"><img src="images/1/scene_13.png"></div>
+                <div class="cinco hidden-xs hidden-sm" data-depth="0.2"><img src="images/1/scene_15.png"></div>
+            </div>
+            <div class="container medio-centro">
+                <div class="col-md-6 medio-izquierdo">
+                    <center>
+                        <img src="images/1/uso_1_24.png" class="bounceInLeft animated wow logomedio-halls">
+                        <img src="images/1/home_03.png" class="bounceInLeft animated wow" data-wow-delay="0.6s">
+                    </center>
+                </div>
+                <div class="col-md-6 medio-derecho">
+                    <center>
+                        <img src="images/1/uso_1_17.png" class="imagen-derecho1">
+                        <img src="images/1/uso_1_21.png" class="imagen-derecho2">
+                    </center>
+                </div>
+            </div>
+        </div>
+        <!-- CUERPO 1 -->
+        <!-- CUERPO 2 -->
+        <div class="cuerpo-2" id="cuerpo2">
+            <div class="container">
+                <div class="col-md-6">
+                </div>
+                <div class="col-md-6">
+                    <div class="seis hidden-xs"><img src="images/2/usos_2_05.png"></div>
+                    <div class="siete hidden-xs"><img src="images/2/usos_2_02.png"></div>
+                    <div class="ocho"><img src="images/2/usos_2_08.png"></div>
+                </div>
+                <div class="row-fluid">
+                    <div class="col-md-6">
+                    </div>
+                    <div class="col-md-6">
+                        <center><img src="images/1/uso_1_17.png" class="reclama-2 animated wow rotateIn"></center>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="col-md-12" data-wow-delay="0.2s">
+                        <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                            <!-- Bottom Carousel Indicators -->
+
+                            <!-- Carousel Slides / Quotes -->
+                            <div class="carousel-inner text-center">
+
+                                <!-- Quote 1 -->
+                                <div class="item active">
+                                    <blockquote>
+                                        <div class="row-fluid">
+                                            <div class="col-sm-8 col-sm-offset-2 slider-pro">
+
+                                                <center>
+                                                    <img src="images/2/slider_1.png">
+                                                </center>
+                                            </div>
+                                        </div>
+                                    </blockquote>
+                                </div>
+                                <!-- Quote 2 -->
+                                <div class="item">
+                                    <blockquote>
+                                        <div class="row-fluid">
+                                            <div class="col-sm-8 col-sm-offset-2 slider-pro">
+                                                <center>
+                                                    <img src="images/2/slider_2.png">
+                                                </center>
+                                            </div>
+                                        </div>
+                                    </blockquote>
+                                </div>
+                                <!-- Quote 3 -->
+                                <div class="item">
+                                    <blockquote>
+                                        <div class="row-fluid">
+                                            <div class="col-sm-8 col-sm-offset-2 slider-pro">
+
+                                                <center>
+                                                    <img src="images/2/slider_3.png">
+                                                </center>
+                                            </div>
+                                        </div>
+                                    </blockquote>
+                                </div>
+                                <div class="item">
+                                    <blockquote>
+                                        <div class="row-fluid">
+                                            <div class="col-sm-8 col-sm-offset-2 slider-pro">
+
+                                                <center>
+                                                    <img src="images/2/slider_4.png">
+                                                </center>
+                                            </div>
+                                        </div>
+                                    </blockquote>
+                                </div>
+                            </div>
+
+                            <!-- Carousel Buttons Next/Prev -->
+                            <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+                            <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- CUERPO 2 -->
+        <!-- CUERPO 3 -->
+        <div class="cuerpo-3" id="cuerpo3">
+            <div class="container">
+                <div class="col-md-6"></div>
+                <div class="col-md-6">
+                    <center><img src="images/1/uso_1_17.png" class="reclama-2 animated wow rotateIn"></center>
+                </div>
+                <div class="col-md-12 medio-3">
+                    <div class="col-md-3 col-xs-6 halls-1">
+                        <center>
+                            <img src="images/3/Halls-Cereza.png" class="hvr-float-shadow">
+                            <p>CEREZA</p>
+                        </center>
+                    </div>
+                    <div class="col-md-3 col-xs-6 halls-2">
+                        <center>
+                            <img src="images/3/Halls-Fresa.png" class="hvr-float-shadow">
+                            <p>FRESA
+                                <BR>CREMOSA</p>
+                        </center>
+                    </div>
+                    <div class="col-md-3 col-xs-6 halls-3">
+                        <center>
+                            <img src="images/3/Halls-ExtraFuerte.png" class="hvr-float-shadow">
+                            <p>EXTRA
+                                <BR>FUERTE</p>
+                        </center>
+                    </div>
+                    <div class="col-md-3 col-xs-6 halls-4">
+                        <center>
+                            <img src="images/3/Halls-Menta.png" class="hvr-float-shadow">
+                            <p>MENTA</p>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CUERPO 3 -->
+        <!-- CUERPO 4 -->
+        <div class="cuerpo-4" id="cuerpo4">
+            <div class="container">
+                <div class="col-md-6"></div>
+                <div class="col-md-6">
+                    <center><img src="images/1/uso_1_17.png" class="reclama-2 animated wow rotateIn"></center>
+                </div>
+                <div class="col-md-12 medio-4">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 col-xs-6">
+                        <center>
+                            <img src="images/4/icon_03.png" class="img-responsive bounceInUp animated wow" data-wow-delay="1s">
+                        </center>
+                    </div>
+                    <div class="col-md-5 col-xs-6">
+                        <center>
+                            <img src="images/4/icon_05.png" class="img-responsive bounceInUp animated wow" data-wow-delay="1s">
+                        </center>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-4 col-xs-6">
+                        <center>
+                            <img src="images/4/icon_10.png" class="img-responsive bounceInUp animated wow" data-wow-delay="1s">
+                        </center>
+                    </div>
+                    <div class="col-md-4 col-xs-6">
+                        <center>
+                            <img src="images/4/icon_12.png" class="img-responsive bounceInUp animated wow" data-wow-delay="1s">
+                        </center>
+                    </div>
+                    <div class="col-md-4 col-xs-6">
+                        <center>
+                            <img src="images/4/icon_14.png" class="img-responsive bounceInUp animated wow" data-wow-delay="1s">
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CUERPO 4 -->
+        <!-- CUERPO 5 -->
+        <div class="cuerpo-5" id="cuerpo5">
+            <div class="container">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <form>
+                        <i class="fa fa-search" aria-hidden="true"></i><input type="text" name="search" placeholder="Buscar..." class="buscador">
+                    </form>
+                    <div class="tabla-general">
+                        <table class="table table-hover">
+                        <thead>
+                            <tr class="boerde-tabla">
+                                <th scope="col" colspan="2" class="arriba-table table-1">Nombre</th>
+                                <th scope="col" colspan="2" class="arriba-table table-2">Premio</th>
+
+                            </tr>
+                        </thead>
+                        <tbody class="body-table">
+                            <tr>
+                                <td colspan="2">Lorem ipsun Dolor Sit Atem</td>
+                                <td colspan="2">Otto</td>
+
+                            </tr>
+                            <tr>
+                                <td colspan="2">Lorem ipsun Dolor Sit Atem</td>
+                                <td colspan="2">Otto</td>
+
+                            </tr>
+                            <tr>
+                                <td colspan="2">Lorem ipsun Dolor Sit Atem</td>
+                                <td colspan="2">Otto</td>
+
+                            </tr>
+                            <tr>
+                                <td colspan="2">Lorem ipsun Dolor Sit Atem</td>
+                                <td colspan="2">Otto</td>
+
+                            </tr>
+                            <tr>
+                                <td colspan="2">Lorem ipsun Dolor Sit Atem</td>
+                                <td colspan="2">Otto</td>
+
+                            </tr>
+                            <tr>
+                                <td colspan="2">Lorem ipsun Dolor Sit Atem</td>
+                                <td colspan="2">Otto</td>
+
+                            </tr>
+                            <tr>
+                                <td colspan="2">Lorem ipsun Dolor Sit Atem</td>
+                                <td colspan="2">Otto</td>
+
+                            </tr>
+                            <tr>
+                                <td colspan="2">Lorem ipsun Dolor Sit Atem</td>
+                                <td colspan="2">Otto</td>
+
+                            </tr>
+                            <tr>
+                                <td colspan="2">Lorem ipsun Dolor Sit Atem</td>
+                                <td colspan="2">Otto</td>
+
+                            </tr>
+                            <tr>
+                                <td colspan="2">Lorem ipsun Dolor Sit Atem</td>
+                                <td colspan="2">Otto</td>
+
+                            </tr>
+                            <tr>
+                                <td colspan="2">Lorem ipsun Dolor Sit Atem</td>
+                                <td colspan="2">Otto</td>
+
+                            </tr>
+                            <tr>
+                                <td colspan="2">Lorem ipsun Dolor Sit Atem</td>
+                                <td colspan="2">Otto</td>
+
+                            </tr>
+                            <tr>
+                                <td colspan="2">Lorem ipsun Dolor Sit Atem</td>
+                                <td colspan="2">Otto</td>
+
+                            </tr>
+                            <tr>
+                                <td colspan="2">Lorem ipsun Dolor Sit Atem</td>
+                                <td colspan="2">Otto</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+        <!-- CUERPO 5-->
+        <!-- FOOTER -->
+        <div class="footer">
+            <center>
+                <p><a data-toggle="modal" data-target="#myModal"><i class="fa fa-angle-up fa-lg" aria-hidden="true"></i> TÉRMINOS Y CONDICIONES</a></p>
+            </center>
+            <!-- MODAL TÉRMINOS Y CONDICIONES-->
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <center><h4 class="modal-title">TÉRMINOS Y CONDICIONES</h4></center>
+                        </div>
+                        <div class="modal-body">
+                            <P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT COLOR="#000000">
+</FONT><FONT COLOR="#000000"><FONT FACE="Arial, serif"><FONT SIZE=2 STYLE="font-size: 9pt">Registrado
+por Pro Consumidor bajo el </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Arial, serif"><FONT SIZE=2 STYLE="font-size: 9pt"><B>No.
+CRS-085/2018 </B></FONT></FONT></FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><A NAME="_GoBack"></A>
+ <FONT FACE="Arial, serif"><B>REPUBLICA DOMINICANA- REGLAMENTO DE LA
+PROMOCIÓN </B></FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%">“<FONT FACE="Arial, serif"><I><B>Halls
+te da un respiro por 6 meses” </B></I></FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif"><B>1.
+ORGANIZADORA, PARTICIPANTES Y TERRITORIO. </B></FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif"><B>LA
+ORGANIZADORA: </B></FONT><FONT FACE="Arial, serif">El presente
+reglamento regula la participación en la promoción denominada
+</FONT><FONT FACE="Arial, serif"><I>“Halls te da un respiro por 6
+meses” </I></FONT><FONT FACE="Arial, serif">(en lo adelante “LA
+PROMOCION”) cuya marca involucrada es Halls en las presentaciones
+que más adelante se indican. LA PROMOCION es organizada por la
+empresa </FONT><FONT FACE="Arial, serif"><B>MONDELEZ DOMINICANA, S.A.
+</B></FONT><FONT FACE="Arial, serif">(en adelante </FONT><FONT FACE="Arial, serif"><B>“LA
+ORGANIZADORA”)</B></FONT><FONT FACE="Arial, serif">, sociedad
+comercial organizada y existente de conformidad con las leyes de la
+República Dominicana, inscrita en el Registro Nacional de
+Contribuyentes (“RNC”) bajo el número 1-24-02990-2, con su
+domicilio social y asiento principal sito en Av. Núñez de Cáceres,
+esquina Calle 1, San Gerónimo. Santo Domingo, República Dominicana,
+capital de la República Dominicana. </FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif"><B>PARTICIPANTES:
+</B></FONT><FONT FACE="Arial, serif">Estarán habilitados para
+participar en LA PROMOCION todas las personas que sean mayores de
+edad y posean cédula de identidad y electoral dominicana válida y
+vigente; no obstante, también podrán participar menores cuya edad
+oscile entre los doce (12) y diecisiete (17) años, siempre y cuando
+estos se hagan representar por uno de sus padres, representante o
+tutor legal, quienes a su vez deberán contar con una cédula de
+identidad y electoral dominicana válida y vigente. </FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif">En
+los casos en que el participante sea menor de edad, este deberá
+contar con el correspondiente permiso de su padre, representante o
+tutor legal, quien quedará en ese caso facultado para firmar y
+autorizar la entrega del premio en favor del menor de edad. En este
+caso, LA ORGANIZADORA se asegurará que ese adulto responsable tiene
+la autoridad jurídica para poder autorizar a ese menor de edad a
+recibir el premio. LA ORGANIZADORA no se hace responsable por
+cualquier conflicto o disputa de cualquier naturaleza, que pudiera
+surgir en relación con la persona que se presente como padre,
+representante o tutor legal que autoriza al menor de edad. LA
+ORGANIZADORA tampoco se hace responsable en caso de disputas por
+procesos de judiciales o extrajudiciales relacionados a familiares,
+representantes o tutores legales del menor de edad beneficiado con el
+premio. La responsabilidad de LA ORGANIZADORA se circunscribe única
+y exclusivamente a la entrega del premio. De igual manera, LA
+ORGANIZADORA no será responsable por la guarda o el cuidado del
+menor de edad durante el uso, goce y disfrute del premio. </FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif">No
+podrán participar en LA PROMOCION los empleados de LA ORGANIZADORA,
+sus compañías afiliadas y relacionadas en Centroamérica, así como
+los familiares de éstos hasta el segundo grado de consanguinidad o
+afinidad. Asimismo, queda prohibida la participación de la agencia
+de publicidad de LA ORGANIZADORA, así como de los familiares de sus
+empleados hasta el segundo grado de consanguinidad o afinidad. En
+caso de ser necesario, LA ORGANIZADORA podrá solicitar la
+colaboración de compañías afiliadas en los países participantes.
+</FONT><FONT FACE="Arial, serif"><FONT SIZE=2 STYLE="font-size: 9pt">Registrado
+por Pro Consumidor bajo el </FONT></FONT><FONT FACE="Arial, serif"><FONT SIZE=2 STYLE="font-size: 9pt"><B>No.
+CRS-085/2018 </B></FONT></FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Calibri, serif">2
+</FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%; page-break-before: always">
+<FONT FACE="Arial, serif"><B>TERRITORIO: </B></FONT><FONT FACE="Arial, serif">LA
+PROMOCION aplica únicamente en el territorio de la República
+Dominicana y se regirá por las leyes de este país, siendo los
+tribunales ordinarios de este los competentes para conocer cualquier
+contestación sobre las disposiciones del presente reglamento, así
+como todo lo relacionado con la promoción </FONT><FONT FACE="Arial, serif"><I>“Halls
+te da un respiro por 6 meses”. </I></FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif"><B>2.
+PLAZO DE LA PROMOCION. </B></FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif">LA
+PROMOCIÓN iniciará el día dieciséis (16) del mes de abril del año
+dos mil dieciocho (2018) y finalizará el día quince (15) del mes de
+junio del año dos mil dieciocho (2018), contándose ambas fechas
+inclusive. </FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif"><B>3.
+FORMA DE PARTICIPAR Y REGULACIONES DEL CONCURSO. </B></FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif">Cada
+participante podrá participar en la promoción de la siguiente
+manera: </FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif">El
+participante deberá adquirir uno de los productos “Halls” en las
+presentaciones de 3g de </FONT><FONT FACE="Arial, serif"><I>Halls
+Cherry Lyptus, Halls Creamy Fresa, Halls Menthol Lyptus y Halls Extra
+Strong </I></FONT><FONT FACE="Arial, serif">los cuales tendrán en el
+interior del empaque (unidad de 3g) un texto con el detalle del
+premio que podrá ser reclamado de inmediato llamando al número
+829-601-4985. Desde ese momento el participante quedará habilitado
+para coordinar con la agencia Creatibox responsable de la entrega del
+premio, el día y la hora en la que podrá ir a retirar el mismo. </FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif">Para
+poder reclamar el premio correspondiente, el ganador deberá
+presentar su cédula de identidad junto con el empaque del producto
+participante y el texto premiado. Seguido de esto, la agencia
+responsable verificará el documento de identidad del ganador y el
+empaque premiado. En caso de que lo presentado por el participante
+cumpla con las condiciones exigidas por el presente reglamento, se
+procederá a entregar un documento para su firma como comprobante de
+entrega del premio, además de una toma fotográfica como evidencia
+de esta. Finalmente, la agencia responsable procederá a la entrega
+en efectivo del premio al ganador por el monto equivalente al texto
+premiado. </FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif">En
+ningún caso los participantes podrán ser menores de doce (12) años.
+Cuando se trate de un menor cuya edad oscile entre los doce (12) y
+diecisiete (17) años, se aclara que requieren de la autorización de
+sus padres o un adulto responsable para poder participar, así como
+para poder aceptar y retirar el premio. En ese caso, el participante
+menor de edad deberá conseguir los permisos correspondientes de sus
+padres, representantes o tutores legales. La aceptación del premio
+deberá ser firmada por el padre, el representante o el tutor legal.
+En el caso de las autorizaciones otorgadas por adultos responsables,
+LA ORGANIZADORA se asegurará que ese adulto responsable tiene la
+capacidad y autoridad jurídica para poder autorizar a ese menor de
+edad a recibir el premio. LA ORGANIZADORA no se hace responsable por
+cualquier conflicto o disputa que pudiera surgir en relación con la
+persona que se presente ante la agencia publicitaria como adulto
+representante, padre o tutor legal del menor de edad. LA ORGANIZADORA
+tampoco se hace responsable en caso de disputas por procesos
+judiciales o extrajudiciales relacionados a familiares,
+representantes o tutores legales del menor de edad beneficiado con el
+premio. La responsabilidad de LA ORGANIZADORA se circunscribe única
+y exclusivamente a la entrega del </FONT><FONT FACE="Arial, serif"><FONT SIZE=2 STYLE="font-size: 9pt">Registrado
+por Pro Consumidor bajo el </FONT></FONT><FONT FACE="Arial, serif"><FONT SIZE=2 STYLE="font-size: 9pt"><B>No.
+CRS-085/2018 </B></FONT></FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Calibri, serif">3
+</FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%; page-break-before: always">
+<FONT FACE="Arial, serif">premio. LA ORGANIZADORA tampoco será
+responsable en modo alguno, por la guarda o el cuidado del menor de
+edad durante el uso, goce y disfrute del premio. </FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif"><B>4.
+PREMIOS. </B></FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif">Los
+premios de LA PROMOCION son los siguientes: </FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif">Cien
+(100) Premios Instantáneos divididos de la siguiente manera: </FONT>
+</P>
+<UL>
+    <LI><P ALIGN=JUSTIFY STYLE="margin-bottom: 0.02in; line-height: 100%">
+    • <FONT FACE="Arial, serif">Diez (10) Vales por Gasolina, cada uno
+    equivalente a USD$450.00 dólares de los Estados Unidos de
+    Norteamérica. Se calculó un consumo mensual de gasolina por
+    USD$75.00. </FONT>
+    </P>
+    <LI><P ALIGN=JUSTIFY STYLE="margin-bottom: 0.02in; line-height: 100%">
+    • <FONT FACE="Arial, serif">Veinte (20) Vales por Plan de Celular:
+    cada uno equivalente a USD$300.00 dólares de los Estados Unidos de
+    Norteamérica. Se calculó un consumo mensual de celular por
+    USD$50.00 </FONT>
+    </P>
+    <LI><P ALIGN=JUSTIFY STYLE="margin-bottom: 0.02in; line-height: 100%">
+    • <FONT FACE="Arial, serif">Cuarenta (40) Vales por Gimnasio: cada
+    uno equivalente a USD$162.00 dólares de los Estados Unidos de
+    Norteamérica. Se calculó un consumo mensual de Gimnasio por
+    USD$27.00 </FONT>
+    </P>
+    <LI><P ALIGN=JUSTIFY STYLE="margin-bottom: 0.02in; line-height: 100%">
+    • <FONT FACE="Arial, serif">Veinte (20) Vales por Salón de
+    belleza: cada uno equivalente a USD$312.00 dólares de los Estados
+    Unidos de Norteamérica. Se calculó un consumo mensual de Salón de
+    belleza por USD$52.00 </FONT>
+    </P>
+    <LI><P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%">•
+    <FONT FACE="Arial, serif">Diez (10) Vales por USD$100.00 dólares de
+    los Estados Unidos de Norteamérica. </FONT>
+    </P>
+</UL>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif">Estos
+premios serán entregados mediante la modalidad de dinero en
+efectivo. Los ganadores recibirán el 100% de los montos detallados
+anteriormente, quedando a cargo de LA ORGANIZADORA la obligación de
+asumir el veinticinco (25%) de los montos señalados anteriormente,
+como retención por concepto de impuesto sobre la renta en aplicación
+de las disposiciones del artículo 309 del Código Tributario de la
+República Dominicana. El ganador podrá utilizar el dinero en el
+concepto sugerido por el texto premiado o en lo que considere más
+conveniente. </FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif">Para
+reclamar su premio, los ganadores se deberán poner en contacto con
+la agencia responsable y organizadora de LA PROMOCION para coordinar
+el retiro del premio. Deberán a su vez presentar su cédula de
+identidad, así como el empaque con el texto premiado. Los reclamos
+deberán ser realizados los días martes, miércoles, jueves y
+viernes en horario comprendido entre las 2:00 P.M. y las 5:00 P.M.
+Para poder retirar el premio, el ganador deberá firmar el documento
+denominado “</FONT><FONT FACE="Arial, serif"><I>Declaración de
+Elegibilidad y Relevo de Responsabilidad”. </I></FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif">Los
+premios de este sorteo no son canjeables, endosables, transferibles,
+sustituibles y/o redimibles. Los premios deberán ser reclamados por
+los participantes a más tardar tres (03) meses luego de la fecha de
+finalización de LA PROMOCION, la cual se encuentra indicada en el
+presente reglamento. En ese sentido, el participante podrá hacer el
+reclamo del premio desde el día dieciséis (16) de abril del dos mil
+dieciocho (2018) hasta el día catorce (14) de septiembre del dos mil
+dieciocho (2018). Si en el periodo anteriormente señalado no se hace
+el reclamo del texto premiado, se dará por entendido que el ganador
+ha renunciado al premio y consecuentemente, no podrá hacer reclamo
+parcial o total de este en una fecha posterior a la señalada en el
+presente reglamento. </FONT><FONT FACE="Arial, serif"><FONT SIZE=2 STYLE="font-size: 9pt">Registrado
+por Pro Consumidor bajo el </FONT></FONT><FONT FACE="Arial, serif"><FONT SIZE=2 STYLE="font-size: 9pt"><B>No.
+CRS-085/2018 </B></FONT></FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Calibri, serif">4
+</FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%; page-break-before: always">
+<FONT FACE="Arial, serif">La ORGANIZADORA no reconocerá diferencias
+o gastos reclamados por el ganador ni por su acompañante ni
+entregará ninguna compensación adicional en efectivo u otro medio.
+El premio no cubre transportes, impuestos, propinas, llamadas
+telefónicas, seguros y cualquier otro gasto no incluido expresamente
+en este reglamento, lo cual quedará a cargo exclusivo del ganador y
+su acompañante. </FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif">LA
+ORGANIZADORA no será responsable en el caso de que el ganador, por
+cualquier motivo, no se presente a reclamar su premio. LA
+ORGANIZADORA tampoco se hará responsable por cualquier accidente o
+lesión que sufra el ganador y/o alguno de sus acompañantes durante
+el goce y disfrute del premio ni por el uso que se le dé a este
+último. </FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif">LA
+PROMOCIÓN solo aplica para personas mayores de doce (12) años. En
+el caso de que la persona reclamante no cuente con al menos doce (12)
+años de edad, no se le podrá entregar el premio ya que esta edad no
+está permitida para la participación en LA PROMOCIÓN. En caso de
+que el ganador sea un menor cuya edad oscile entre los doce (12) y
+diecisiete (17) años, el premio será entregado a uno de sus padres,
+representante, tutor y/o persona responsable para que disponga del
+mismo, previa comprobación por parte de LA ORGANIZADORA de que este
+adulto posee la aptitud necesaria para poder recibir el premio en
+nombre del menor de edad. Al momento en que la agencia contacte al
+ganador vía telefónica, si este es menor de edad, deberá brindar
+los datos del padre y/o persona responsable para hacer efectivo el
+premio, de lo contrario, perderá su derecho a reclamarlo. </FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif">Ni
+LA ORGANIZADORA ni la agencia organizadora de LA PROMOCION
+reconocerán diferencias o gastos reclamados por el ganador, ni
+entregará ninguna compensación adicional en efectivo u otro medio.
+El premio no cubre transportes, impuestos, seguros ni cualquier otro
+gasto no incluido expresamente en este reglamento, lo cual estará a
+cargo exclusivo del ganador. </FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif">En
+el supuesto que por motivos fuera del alcance LA ORGANIZADORA, deba
+suspenderse la entrega de los premios instantáneos o cualquier
+porción de este, o que realizarlo constituya un riesgo inaceptable
+para la integridad física y/o seguridad del participante, LA
+ORGANIZADORA tendrá la opción más no la obligación de canjear los
+premios por otros de costo equivalente. </FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif">Los
+ganadores se darán a conocer en la página web de LA PROMOCION. El
+participante autoriza a LA ORGANIZADORA para que su imagen y nombre
+aparezcan en cualquier medio publicitario que estime conveniente, sin
+que por ello tenga que reconocerle a este rubro o compensación
+alguna. </FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif"><B>5.
+PUBLICIDAD. </B></FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif">Los
+ganadores se darán a conocer en la página web de LA PROMOCION
+www.promohallsrd.com. El participante autoriza a LA ORGANIZADORA para
+que las imágenes, el nombre de los ganadores o ganadoras aparezcan
+en periódicos de circulación nacional, páginas web, redes sociales
+y canales de televisión, sin remuneración alguna y exonerándola de
+cualquier reclamo relacionado con derechos de imagen. Lo anterior con
+el objetivo de divulgar los resultados de LA PROMOCION por espacio de
+un (01) año. Asimismo, el ganador autoriza a que se le tomen
+fotografías y se grabe un video recibiendo su premio, sin ningún
+tipo de </FONT><FONT FACE="Arial, serif"><FONT SIZE=2 STYLE="font-size: 9pt">Registrado
+por Pro Consumidor bajo el </FONT></FONT><FONT FACE="Arial, serif"><FONT SIZE=2 STYLE="font-size: 9pt"><B>No.
+CRS-085/2018 </B></FONT></FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Calibri, serif">5
+</FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%; page-break-before: always">
+<FONT FACE="Arial, serif">remuneración y exonerando a LA
+ORGANIZADORA de cualquier reclamo relacionado con derechos de imagen.
+La utilización de dichas fotografías podrá hacerse en un plazo que
+no exceda un (01) año a partir de la entrega efectiva del premio al
+ganador o ganadora. </FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif"><B>8.
+ACEPTACIÓN DE ESTE REGLAMENTO. </B></FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif">El
+participante de esta promoción acepta que el hecho de participar en
+la misma es una manifestación de su conocimiento y conformidad con
+el presente Reglamento. </FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif"><B>9.
+MODIFICACIÓN, PRORROGA Y CANCELACIÓN. </B></FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif">LA
+ORGANIZADORA podrá no entregar el (los) premio(s) o bien podrá
+suspender definitivamente –en cualquier tiempo- LA PROMOCION,
+previa aprobación de la Dirección Ejecutiva del Instituto de
+Protección a los Derechos del Consumidor (“PROCONSUMIDOR”)
+pertinentes sin ninguna responsabilidad, en los siguientes casos: </FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif"><B>1.
+</B></FONT><FONT FACE="Arial, serif">En el evento de caso fortuito o
+fuerza mayor la empresa podrá cambiar la naturaleza y/o las
+características de los premios, previa notificación y aprobación
+escrita de la Dirección Ejecutiva de Pro Consumidor y aviso por un
+medio masivo de comunicación. </FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif"><B>2.
+</B></FONT><FONT FACE="Arial, serif">Si los participantes ganadores
+no cumplen estrictamente con todas sus obligaciones de conformidad
+con este reglamento; </FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif"><B>3.
+</B></FONT><FONT FACE="Arial, serif">Si cualquiera de los ganadores,
+por causa directa o indirecta, cometieran cualquier tipo de acción
+que dañara la reputación de LA ORGANIZADORA, sus representantes o
+agentes, sus marcas o bien sus relaciones públicas en el mercado. </FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif"><B>4.
+</B></FONT><FONT FACE="Arial, serif">Si los ganadores, por cualquier
+motivo, no aceptan el premio, caso en el cual éste se considerará,
+para todos los efectos legales, como renunciado. </FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif"><B>5.
+</B></FONT><FONT FACE="Arial, serif">Si LA ORGANIZADORA por algún
+motivo no puede localizar a una persona que resultó favorecida, para
+coordinar la entrega del premio antes de la fecha límite establecida
+en el presente reglamento; ello no generará responsabilidad de
+ningún tipo para LA ORGANIZADORA y el interesado perderá el derecho
+al reclamo o a obtener indemnización alguna. </FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif">LA
+ORGANIZADORA podrá modificar, postergar, ampliar, recortar y en
+general, variar el periodo promocional o el disfrute de los premios,
+en caso de que las circunstancias así lo requieran, ante cualquier
+imprevisto o problema que se pudiera presentar, sea éste o no
+directamente atribuible a LA ORGANIZADORA, luego de haber cumplido
+con los trámites establecidos para validar este cambio por ante el
+Instituto Nacional de Protección de los Derechos del Consumidor
+(PROCONSUMIDOR). Así pues, se entenderá como plazo de LA PROMOCION
+el que se indique en tal modificación. Quienes hayan participado
+antes de la mencionada reforma, seguirán como participantes aún
+después de reformada LA PROMOCION. Queda a cargo de LA ORGANIZADORA
+publicar y notificar los nuevos cambios en LA PROMOCION a través de
+los mismos medios de comunicación utilizados para la difusión,
+divulgación y publicación del presente reglamento. </FONT><FONT FACE="Arial, serif"><FONT SIZE=2 STYLE="font-size: 9pt">Registrado
+por Pro Consumidor bajo el </FONT></FONT><FONT FACE="Arial, serif"><FONT SIZE=2 STYLE="font-size: 9pt"><B>No.
+CRS-085/2018 </B></FONT></FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Calibri, serif">6
+</FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%; page-break-before: always">
+<FONT FACE="Arial, serif"><B>10. RESPONSABILIDAD </B></FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif">La
+responsabilidad de LA ORGANIZADORA se limita única y exclusivamente
+a entregar a través de su agencia publicitaria, el (los) premio (s)
+a las personas que se identifiquen como ganadores. LA ORGANIZADORA no
+será responsable bajo ningún concepto por lo siguiente: </FONT>
+</P>
+<UL>
+    <LI><P ALIGN=JUSTIFY STYLE="margin-bottom: 0.02in; line-height: 100%">
+    • <FONT FACE="Arial, serif">Por el uso y disposición que haga el
+    ganador con el premio. </FONT>
+    </P>
+    <LI><P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%">•
+    <FONT FACE="Arial, serif">Por todo lo que sea distinto a la entrega
+    del premio. </FONT>
+    </P>
+</UL>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif">LA
+ORGANIZADORA no intervendrá, ni tendrá responsabilidad alguna por
+los inconvenientes y/o problemas y/o discusiones que se presenten
+entre el titular del empaque favorecido y cualquier otra persona, en
+relación o disputa por la posesión y/o la titularidad de dicho
+empaque. </FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif"><B>11.
+</B></FONT><FONT FACE="Arial, serif">PROTECCIÓN DE DATOS PERSONALES.
+</FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif">Los
+datos de carácter personal solicitados para la activación del
+participante serán incorporados a un fichero automatizado para poder
+ser utilizados en las comunicaciones propias de LA PROMOCION con la
+finalidad de poder ser contactados por </FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif">LA
+ORGANIZADORA. El participante reconoce que LA ORGANIZADORA podrá
+utilizar los datos contenidos en los indicados ficheros para fines
+publicitarios vinculados con la presente promoción por espacio de un
+(01) año. El fichero es totalmente confidencial y sobre los datos
+personales registrados, el titular podrá ejercer en todo momento su
+derecho de acceso, rectificación, cancelación y oposición. Para
+ello solo tiene que dirigirse a los contactos indicados en el
+presente reglamento. En caso de cancelación y oposición a los
+datos, el participante quedará excluido del concurso y no tendrá
+derecho a ejercer reclamo alguno sobre los premios. </FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif"><B>12.
+INTERPRETACIÓN DE ESTE REGLAMENTO. </B></FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif">Para
+más información o consultas respecto a las normas contenidas en
+este reglamento, puede comunicarse al teléfono 809-238-5757 en días
+y horas hábiles. </FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Arial, serif"><B>13.
+JURISDICCIÓN. </B></FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in"><FONT FACE="Arial, serif">En
+caso de que surja alguna controversia en relación con los términos
+del presente reglamento, esta será resuelto en estricto apego a las
+leyes de la República Dominicana, siendo los tribunales ordinarios
+de derecho común de este país los únicos competentes para conocer
+de la misma.</FONT></P>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- MODAL TÉRMINOS Y CONDICIONES-->
+            <!-- MODAL VIDEO -->
+            <div id="myModal2" class="modal modal-video fade bounceIn animated wow" data-wow-delay="3.5s">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title">VIdeo</h4>
+                            </div>
+                            <div class="modal-body">
+                               <iframe width="100%" height="500" src="https://www.youtube.com/embed/IfeFtqko4to?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+ <!-- MODAL VIDEO -->
+        </div>
+        <!-- FOOTER -->
+    </div>
+    <!-- PARALLAX JS -->
+  <script type="text/javascript">
+        var scene = document.getElementById('scene');
+        var parallaxInstance = new Parallax(scene, {
+          relativeInput: true
+        });
+    </script>
+
+    <!-- PARALLAX JS -->
+    <!-- MENU MOBLIE -->
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+    <!-- MENU MOBLIE -->
+</body>
+
+</html>
